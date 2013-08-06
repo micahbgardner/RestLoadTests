@@ -8,7 +8,7 @@ namespace RestCalls.BillingInfoRestCalls
     {
         public IRestResponse GetUserBillingInfo(int userId)
         {
-            var client = new RestClient("http://dev2-connect.mbodev.me");
+            var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
             var request = new RestRequest("/rest/user/{userId}/billinginfo", Method.GET) { RequestFormat = DataFormat.Json };
 
@@ -22,7 +22,7 @@ namespace RestCalls.BillingInfoRestCalls
 
         public IRestResponse AddUserBillingInfo(int userId, RestRequestBillingInfo userInfo)
         {
-            var client = new RestClient("http://dev2-connect.mbodev.me");
+            var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
             var request = new RestRequest("/rest/user/{userId}/billinginfo", Method.POST) { RequestFormat = DataFormat.Json };
 
@@ -50,7 +50,7 @@ namespace RestCalls.BillingInfoRestCalls
 
         public IRestResponse RemoveUserBillingInfo(int userId, int cardId)
         {
-            var client = new RestClient("http://dev2-connect.mbodev.me");
+            var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
             var request = new RestRequest("/rest/user/{userId}/billinginfo/{cardId}", Method.DELETE) { RequestFormat = DataFormat.Json };
 
@@ -65,7 +65,7 @@ namespace RestCalls.BillingInfoRestCalls
 
         public IRestResponse UpdateUserBillingInfo(int userId, int cardId, RestRequestBillingInfo userInfo)
         {
-            var client = new RestClient("http://dev2-connect.mbodev.me");
+            var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
             var request = new RestRequest("/rest/user/{userId}/billinginfo/{cardId}", Method.PUT) { RequestFormat = DataFormat.Json };
 
