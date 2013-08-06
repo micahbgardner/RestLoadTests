@@ -32,7 +32,7 @@ namespace RestCalls.StaffRestCalls
 
         public IRestResponse UpdateStaff(int siteId, int staffId, RestRequestStaff staff)
         {
-            var client = new RestClient("http://dev2-connect.mbodev.me/");
+            var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
             var request = new RestRequest("/rest/staff/{staffId}", Method.PUT) { RequestFormat = DataFormat.Json };
 
@@ -58,7 +58,7 @@ namespace RestCalls.StaffRestCalls
 
         public IRestResponse StaffToken(RestRequestStaffInfo staff)
         {
-            var client = new RestClient("https://dev-auth.mindbodyonline.com");
+            var client = new RestClient("https://auth.mbodev.me");
 
             var request = new RestRequest("/issue/oauth2/token", Method.POST) { RequestFormat = DataFormat.Json };
 
@@ -80,7 +80,7 @@ namespace RestCalls.StaffRestCalls
 
         public IRestResponse StaffPhoto(int siteId, int staffId, string base64File)
         {
-            var client = new RestClient("http://dev2-connect.mbodev.me/");
+            var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
             var request = new RestRequest("/rest/staff/ProfileImage/?staffID={StaffID}", Method.POST) { RequestFormat = DataFormat.Json };
 
