@@ -34,7 +34,7 @@ namespace RestCalls.StaffRestCalls
         {
             var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
-            var request = new RestRequest("/rest/staff/{staffId}", Method.PUT) { RequestFormat = DataFormat.Json };
+            var request = new RestRequest("/Rest/Staff/{staffId}", Method.PUT) { RequestFormat = DataFormat.Json };
 
             request.AddHeader("Content-Type", "application/json");
             request.AddHeader("Authorization", "Bearer " + StaffAccessToken);
