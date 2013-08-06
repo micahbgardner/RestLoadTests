@@ -8,9 +8,9 @@ namespace RestCalls.StaffRestCalls
     {
         public IRestResponse AddStaff(int siteId, RestRequestStaff staff)
         {
-            var client = new RestClient("http://dev2-connect.mbodev.me/");
+            var client = new RestClient("http://dev-mobile-rest.mbodev.me/");
 
-            var request = new RestRequest("/rest/staff", Method.POST) { RequestFormat = DataFormat.Json };
+            var request = new RestRequest("/Rest/Staff", Method.POST) { RequestFormat = DataFormat.Json };
 
             request.AddHeader("Content-Type", "application/json");
             request.AddHeader("Authorization", "Bearer " + StaffAccessToken);
